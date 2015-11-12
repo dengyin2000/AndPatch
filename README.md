@@ -12,6 +12,6 @@ AndPatch是参考QZone的这篇文章来实现的：http://bugly.qq.com/blog/?p=
 
 本例子主要是一个除法计算的Sample。MatchService.java没有考虑除数为0的情况，如果直接运行Sample，当除数为0时会发生崩溃。
 
-hack.dex包含了修复版本的MatchService和AntilazyLoad类，你只需要把hack.dex放到手机的/data/data/com.dengyin2000.andpatch/cache/andpatch目录下面，运行app的时候就能解决除数为0时的崩溃问题。
+[hack.dex](https://github.com/dengyin2000/AndPatch/raw/master/hack.dex)包含了修复版本的MatchService和AntilazyLoad类，你只需要把hack.dex放到手机的/data/data/com.dengyin2000.andpatch/cache/andpatch目录下面，运行app的时候就能解决除数为0时的崩溃问题。
 
 本示例借鉴了multidex源码。
