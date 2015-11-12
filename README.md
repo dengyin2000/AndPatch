@@ -2,7 +2,7 @@
 
 AndPatch是通过ClassLoader来实现Android的热补丁方案，AndPatch比阿里的Dexposed或者Andfix强在稳定性上，因为Dexposed和Andfix是通过ndk method hook来实现的，之前在使用Dexposed和Andfix时也是遇到各种问题。
 
-AndPatch是参考QZone的这篇文章来实现的：http://bugly.qq.com/blog/?p=781
+AndPatch是参考QZone的这篇文章来实现的：http://buglyjava
 
 ## 实现原理
 
@@ -15,3 +15,8 @@ AndPatch是参考QZone的这篇文章来实现的：http://bugly.qq.com/blog/?p=
 [hack.dex](https://github.com/dengyin2000/AndPatch/raw/master/hack.dex)包含了修复版本的MatchService和AntilazyLoad类，你只需要把hack.dex放到手机的/data/data/com.dengyin2000.andpatch/cache/andpatch目录下面，运行app的时候就能解决除数为0时的崩溃问题。
 
 本示例借鉴了multidex源码。
+
+## TODO...
+
+* gradle脚本通过javaassist库自动往每个类的默认构造函数插入`System.out.println(AntilazyLoad.class);`
+* gradle脚本自动生成hack.dex文件。
